@@ -9,43 +9,67 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        dbspc: del_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp DEL>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        shftcap: shift_caps {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        lyrtp: layer_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 1>, <&tog 1>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // ----------------------------------------------------------------------------------------- 
-//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g   |  c   |  r  |  l  | /    |
-//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h   |  t   |  n  |  s  | ENT  |
-//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m   |  w   |  v  |  z  | SHFT |
-//                     | WIN | CTRL | ESC |          | SPC | RSE  | LWR  |
+//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g  |  c  |  r  |  l  | /    |
+//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h  |  t  |  n  |  s  | ENT  |
+//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m  |  w  |  v  |  z  | SHFT |
+//                     | WIN | CTRL | ESC |          | SPC | RSE | LWR |
                         bindings = <
-   &kp TAB   &kp Q &kp W    &kp E    &kp R  &kp T              &kp Y     &kp U  &kp I     &kp O   &kp P    &kp ESC
-   &kp BSPC  &kp A &kp S    &kp D    &kp F  &kp G              &kp H     &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &sk LSHFT &kp Z &kp X    &kp C    &kp V  &kp B              &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                            &kp LALT &mo 2  &kp SPACE          &kp SPACE &mo 1 &kp RCTRL
+   &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G  &kp C &kp R &kp L &kp /
+   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H  &kp T &kp N &kp S &kp RET
+   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M  &kp W &kp V &kp Z &sk RSHFT
+                                &kp LALT &mo CTRL  &gresc             &kp SPACE &lyrtp &tog 2
                         >;
                 };
 
                 lower_layer { 
 // -----------------------------------------------------------------------------------------
-// |  `   |  !   |  @  |  #   |  $   |  %  |          |  ^   |   &  |  *   |  (  |  )  | DEL  |
-// | BKSP |  1   |  2  |  3   |  4   |  5  |          |  6   |   7  |  8   |  9  |  0  | ENT  |
-// | SHFT |  F1  |  F2 |  F3  |  F4  |  F5 |          |  F6  |   F7 |  F8  |  F9 | F10 | SHFT |
-//                     | ALT  | CTRL | ESC |          | SPC  | RSE  | LWR  |
+// | `    |  !   |  @  |  #   |  $   |  %  |          |  ^   | &   |  *   |  (  |  )  | -    |
+// | BKSP |  1   |  2  |  3   |  4   |  5  |          |  6   | 7   |  8   |  9  |  0  | ENT  |
+// | SHFT |  F1  |  F2 |  F3  |  F4  |  F5 |          |  F6  | F7  |  F8  |  F9 | F10 | SHFT |
+//                     | ALT  | CTRL |  .  |          | SPC  | RSE | BASE  |
                         bindings = <
    &kp GRAVE  &kp N1   &kp N2   &kp N3   &kp N4    &kp N5               &kp N6    &kp N7   &kp N8   &kp N9    &kp N0 &kp DEL
-   &kp BSPC   &kp HOME &kp LEFT &kp UP   &kp RIGHT &kp END              &kp HOME  &kp LEFT &kp UP   &kp RIGHT &kp END &kp RET
+   &dbspc     &kp HOME &kp LEFT &kp UP   &kp RIGHT &kp END              &kp HOME  &kp LEFT &kp UP   &kp RIGHT &kp END &kp RET
    &kp LSHFT  &trans   &trans   &kp DOWN &trans    &trans               &trans    &trans   &kp DOWN &trans    &trans &kp RSHFT
                                 &kp LGUI &kp DOT   &kp SPACE            &kp SPACE &trans   &kp RALT
                         >;
                 };
-
+                
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  `   |   !  |  @  |  UP  |  $   |  %  |          | "|" |  [  |  ]  |  ^  |  \  |  /  |
-// | BKSP | HOME | LFT | DOWN | RGT  | END |          |  (  |  )  |  =  |  <  |  >  | ENT |
-// |      |      |     |  #   |      |     |          |  &  |  {  |  }  |  +  |  -  |  _  |
-//                     | ALT  | CTRL | ESC |          | SPC |     |     |
+// |  `   |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^  |  \  |  /  | "|" |
+// | BKSP | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =  |  <  |  >  | ENT |
+// |      |      |     |  #   |      |     |          |  {  |  }   |  +  |  -  |  _  |  &  |
+//                     | ALT  | CTRL | ESC |          | SPC | BASE | LWR |
                         bindings = <
    &kp GRAVE &kp EXCL &kp AT &kp HASH  &kp DLLR &kp PRCNT           &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp BSPC  &trans   &kp LT &kp EQUAL &kp GT   &trans              &kp MINUS &kp EQUAL &kp BSLH        &kp LBKT &kp RBKT &kp GRAVE
