@@ -55,30 +55,30 @@
                 lower_layer {
 // layer 2
 // -----------------------------------------------------------------------------------------
-// | `    |  !   |  @  |  #   |  $   |  %  |          |  ^   | &      |  *   |  (  |  )  | -       |
-// | BKSP |  1   |  2  |  3   |  4   |  5  |          |  6   | 7      |  8   |  9  |  0  | ENT/ALT |
-// | SHFT |  F1  |  F2 |  F3  |  F4  |  F5 |          |  F6  | F7     |  F8  |  F9 | F10 | SHFT    |
-//                     | WIN  | CTRL |  .  |          | SPC  | lyrtp1 | lyr0 |
+// | TAB  |  !   |  @  |  #   |  $   |  %   |          | ^   | &      | *    |  (  |  )  | -       |
+// | BKSP |  1   |  2  |  3   |  4   |  5   |          | 6   | 7      | 8    |  9  |  0  | ENT/ALT |
+// | SHFT |  F1  |  F2 |  F3  |  F4  |  F5  |          | F6  | F7     | F8   |  F9 | F10 | SHFT    |
+//                     | WIN  | CTRL |  ESC |          | SPC | lyrtp1 | lyr0 |
                         bindings = <
-   &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PERCENT          &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &kp MINUS
+   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PERCENT          &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &kp MINUS
    &dbspc    &kp 1    &kp 2  &kp 3    &kp 4     &kp 5                &kp 6     &kp 7    &kp 8    &kp 9     &kp 0    &mt RET RALT
    &shftcap  &kp F1   &kp F2 &kp F3   &kp F4    &kp F5               &kp F6    &kp F7   &kp F8   &kp F9    &kp F10  &kp RSHFT
-                             &kp LGUI &kp LCTRL &kp DOT              &kp SPACE &lyrtp1  &to 2
+                             &kp LGUI &kp LCTRL &gresc               &kp SPACE &lyrtp1  &to 2
                         >;
                 };
 
                 raise_layer {
 // layer 1
 // -----------------------------------------------------------------------------------------
-// |  `    |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^  |  \  |  /  | "|"     |
+// | TAB   |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^  |  \  |  /  | "|"     |
 // | BKSP  | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =  |  <  |  >  | ENT/ALT |
 // | SHIFT |      |     |  #   |      |     |          |  {  |  }   |  +  |  -  |  _  |  &      |
 //                      | WIN  | CTRL | ESC |          | SPC | lyr2 | lyr0 |
                         bindings = <
-  &kp GRAVE &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBRACKET &kp RBRACKET &kp CARET &kp BACKSLASH &kp SLASH  &kp PIPE 
-  &dbspc    &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPRN     &kp RPRN     &kp EQUAL &kp LANGLE    &kp RANGLE &mt RET RALT
-  &shftcap  &trans   &trans   &kp HASH &trans    &trans              &kp LBRACE   &kp RBRACE   &kp PLUS &kp MINUS &kp UNDERSCORE &kp AMPS 
-                              &kp LGUI &trans    &kp SPACE           &kp SPACE    &to 2        &to 0
+  &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBKT  &kp RBKT  &kp CARET &kp BACKSLASH &kp SLASH &kp PIPE 
+  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT        &kp GT    &mt RET RALT
+  &shftcap &trans   &trans   &kp HASH &trans    &trans              &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS     &kp UNDER &kp AMPS 
+                             &kp LGUI &kp LCTRL &gresc              &kp SPACE &to 2     &to 0
                         >;
                 };
         };
