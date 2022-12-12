@@ -44,9 +44,9 @@
 //                     | WIN | CTRL | ESC |          | SPC | RSE | LWR |
                         bindings = <
    &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G  &kp C &kp R &kp L &kp /
-   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H  &kp T &kp N &kp S &kp RET
-   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M  &kp W &kp V &kp Z &sk RSHFT
-                               &kp LALT &mo 2  &kp SPACE          &kp SPACE &mo 1 &kp RCTRL
+   &kp BSPC  &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H  &kp T &kp N &kp S &kp RET
+   &sk RSHFT &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M  &kp W &kp V &kp Z &sk RSHFT
+                                &kp LALT &mo CTRL  &gresc             &kp SPACE &tog1 &tog 2
                         >;
                 };
 
