@@ -25,21 +25,21 @@
             label = "SHIFT_BACKSPACE_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         shftcap: shift_caps {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         lyrtp2: layer_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 2>;
+            bindings = <&mo 2>, <&to 2>;
         };
     };
 
