@@ -70,15 +70,15 @@
                 raise_layer {
 // layer 1
 // -----------------------------------------------------------------------------------------
-// |  `   |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^  |  \  |  /  | "|"     |
-// | BKSP | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =  |  <  |  >  | ENT/ALT |
-// |      |      |     |  #   |      |     |          |  {  |  }   |  +  |  -  |  _  |  &      |
-//                     | WIN  | CTRL | ESC |          | SPC | lyr2 | lyr0 |
+// |  `    |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^  |  \  |  /  | "|"     |
+// | BKSP  | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =  |  <  |  >  | ENT/ALT |
+// | SHIFT |      |     |  #   |      |     |          |  {  |  }   |  +  |  -  |  _  |  &      |
+//                      | WIN  | CTRL | ESC |          | SPC | lyr2 | lyr0 |
                         bindings = <
-   &kp GRAVE &kp EXCL &kp AT &kp UP    &kp DLLR &kp PERCENT         &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp BSPC  &trans   &kp LT &kp EQUAL &kp GT   &trans              &kp MINUS &kp EQUAL &kp BSLH        &kp LBKT &kp RBKT &kp GRAVE
-   &trans    &trans   &trans &kp HASH  &trans   &trans              &kp UNDER &kp PLUS  &kp PIPE        &kp LBRC &kp RBRC &kp TILDE
-                             &kp LGUI  &trans   &kp SPACE           &kp SPACE &to 2     &to 0
+  &kp GRAVE &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBRACKET &kp RBRACKET &kp CARET &kp BACKSLASH &kp SLASH  &kp PIPE 
+  &dbspc    &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPRN     &kp RPRN     &kp EQUAL &kp LANGLE    &kp RANGLE &mt RET RALT
+  &shftcap  &trans   &trans   &kp HASH &trans    &trans              &kp LBRACE   &kp RBRACE   &kp PLUS &kp MINUS &kp UNDERSCORE &kp AMPS 
+                              &kp LGUI &trans    &kp SPACE           &kp SPACE    &to 2        &to 0
                         >;
                 };
         };
