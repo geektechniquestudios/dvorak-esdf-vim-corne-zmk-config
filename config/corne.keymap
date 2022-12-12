@@ -38,15 +38,15 @@
 
                 default_layer {
 // ----------------------------------------------------------------------------------------- 
-//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g   |  c   |  r  |  l  | /    |
-//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h   |  t   |  n  |  s  | ENT  |
-//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m   |  w   |  v  |  z  | SHFT |
-//                     | WIN | CTRL | ESC |          | SPC | RSE  | LWR  |
+//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g  |  c  |  r  |  l  | /    |
+//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h  |  t  |  n  |  s  | ENT  |
+//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m  |  w  |  v  |  z  | SHFT |
+//                     | WIN | CTRL | ESC |          | SPC | RSE | LWR |
                         bindings = <
-   &kp TAB   &kp Q &kp W    &kp E    &kp R  &kp T              &kp Y     &kp U  &kp I     &kp O   &kp P    &kp ESC
-   &kp BSPC  &kp A &kp S    &kp D    &kp F  &kp G              &kp H     &kp J  &kp K     &kp L   &kp SEMI &kp RET
-   &sk LSHFT &kp Z &kp X    &kp C    &kp V  &kp B              &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                            &kp LALT &mo 2  &kp SPACE          &kp SPACE &mo 1 &kp RCTRL
+   &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G  &kp C &kp R &kp L &kp /
+   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H  &kp T &kp N &kp S &kp RET
+   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M  &kp W &kp V &kp Z &sk RSHFT
+                                &kp LALT &mo CTRL  &gresc             &kp SPACE &lyrtp &tog 2
                         >;
                 };
 
