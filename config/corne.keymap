@@ -9,14 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_alt {
-            timeout-ms = <50>;
-            key-positions = <36 37>;
-            bindings = <&kp ALT>;
-        };
-    };
+
 
     behaviors {
         dbspc: del_backspace {
