@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_alt {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+            bindings = <&kp ALT>;
+        };
+    };
+
     behaviors {
         dbspc: del_backspace {
             compatible = "zmk,behavior-mod-morph";
@@ -24,12 +33,12 @@
             bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
-        lyrtp1: layer_tap {
+        lyrtp2: layer_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 1>, <&to 2>;
         };
     };
 
@@ -38,47 +47,47 @@
 
                 default_layer {
 // layer 0
-// -----------------------------------------------------------------------------------------------
-//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g     |  c   |  r  |  l  | /       |
-//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h     |  t   |  n  |  s  | ENT/ALT |
-//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m     |  w   |  v  |  z  | SHFT    |
-//                     | WIN | CTRL | ESC |          | SPC | lyrtp1 | lyr2 |
+// --------------------------------------------------------------------------------------------
+//  |  TAB |  '  |  ,  |  .  |  p   |  y  |          |  f  |  g     |  c   |  r  |  l  | /    |
+//  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  |  h     |  t   |  n  |  s  | ENT  |
+//  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m     |  w   |  v  |  z  | SHFT |
+//                     | WIN | CTRL | ESC |          | SPC | lyrtp2 | lyr1 |
                         bindings = <
    &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G   &kp C &kp R &kp L &kp SLASH
-   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H   &kp T &kp N &kp S &mt RET RALT
+   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H   &kp T &kp N &kp S &kp RET
    &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M   &kp W &kp V &kp Z &shftcap
-                                &kp LGUI &kp LCTRL &gresc             &kp SPACE &lyrtp1 &to 2
+                                &kp LGUI &kp LCTRL &gresc             &kp SPACE &lyrtp2 &to 1
 
                         >;
                 };
 
                 lower_layer {
-// layer 2
-// -------------------------------------------------------------------------------------------------
-// | TAB  |  !   |  @  |  #   | $    |  %   |          | ^   | &      | *    |  (  |  )  | -       |
-// | BKSP |  1   |  2  |  3   | 4    |  5   |          | 6   | 7      | 8    |  9  |  0  | ENT/ALT |
-// | SHFT |  F1  |  F2 |  F3  | .    |  F5  |          | F6  | F7     | F8   |  F9 | F10 | ./SHIFT |
-//                     | WIN  | CTRL |  ESC |          | SPC | lyrtp1 | lyr0 |
+// layer 1
+// -----------------------------------------------------------------------------------------------
+// | TAB  |  !   |  @  |  #   | $    |  %   |          | ^   | &    | *    |  (  |  )  | -     |
+// | BKSP |  1   |  2  |  3   | 4    |  5   |          | 6   | 7    | 8    |  9  |  0  | ENT   |
+// | SHFT |  F1  |  F2 |  F3  | .    |  F5  |          | F6  | F7   | F8   |  F9 | F10 | SHIFT |
+//                     | WIN  | CTRL |  ESC |          | SPC | lyr2 | lyr0 |
                         bindings = <
    &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PERCENT          &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &kp MINUS
-   &dbspc    &kp 1    &kp 2  &kp 3    &kp 4     &kp 5                &kp 6     &kp 7    &kp 8    &kp 9     &kp 0    &mt RET RALT
+   &dbspc    &kp N1   &kp N2 &kp N3   &kp N4    &kp N5               &kp N6    &kp N7   &kp N8   &kp N9    &kp N0   &kp RET
    &shftcap  &kp F1   &kp F2 &kp F3   &kp DOT   &kp F5               &kp F6    &kp F7   &kp F8   &kp F9    &kp F10  &shftcap
-                             &kp LGUI &kp LCTRL &gresc               &kp SPACE &lyrtp1  &to 2
+                             &kp LGUI &kp LCTRL &gresc               &kp SPACE &to 2  &to 0
                         >;
                 };
 
                 raise_layer {
-// layer 1
-// ----------------------------------------------------------------------------------------------
-// | TAB   |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^   |  \  |  /  | "|"     |
-// | BKSP  | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =   |  <  |  >  | ENT/ALT |
-// | SHIFT |      |     |  #   | .    |     |          |  {  |  }   |  +   |  -  |  _  | &       |
-//                      | WIN  | CTRL | ESC |          | SPC | lyr2 | lyr0 |
+// layer 2
+// -------------------------------------------------------------------------------------------
+// | TAB   |   !  |  @  |  UP  |  $   |  %  |          |  [  |  ]   |  ^   |  \  |  /  | "|" |
+// | BKSP  | HOME | LFT | DOWN | RGT  | END |          |  (  |  )   |  =   |  <  |  >  | ENT |
+// | SHIFT |      |     |  #   | .    |     |          |  {  |  }   |  +   |  -  |  _  | &   |
+//                      | WIN  | CTRL | ESC |          | SPC | lyr1 | lyr0 |
                         bindings = <
   &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBKT  &kp RBKT  &kp CARET &kp BACKSLASH &kp SLASH &kp PIPE 
-  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT        &kp GT    &mt RET RALT
+  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT        &kp GT    &kp RET
   &shftcap &trans   &trans   &kp HASH &kp DOT   &trans              &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS     &kp UNDER &kp AMPS 
-                             &kp LGUI &kp LCTRL &gresc              &kp SPACE &to 2     &to 0
+                             &kp LGUI &kp LCTRL &gresc              &kp SPACE &to 1     &to 0
                         >;
                 };
         };
