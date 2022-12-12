@@ -43,10 +43,10 @@
 //  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  |  m   |  w   |  v  |  z  | SHFT |
 //                     | WIN | CTRL | ESC |          | SPC | RSE  | LWR  |
                         bindings = <
-   &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G  &kp C &kp R &kp L &kp SLASH
-   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H  &kp T &kp N &kp S &kp RET
-   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M  &kp W &kp V &kp Z &sk RSHFT
-                            &kp LALT &mo 2  &kp SPACE          &kp SPACE &mo 1 &kp RCTRL
+   &kp TAB   &kp FSLH &kp COMMA &kp DOT  &kp P     &kp Y              &kp F         &kp G  &kp C &kp R &kp L &kp SLASH
+   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D         &kp H  &kp T &kp N &kp S &kp RET
+   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B         &kp M  &kp W &kp V &kp Z &sk RSHFT
+                                &kp LGUI &kp CTRL  &gresc             &mt SPACE ALT &lyrtp &tog 2
                         >;
                 };
 
