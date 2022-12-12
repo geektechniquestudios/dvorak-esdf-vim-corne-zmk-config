@@ -34,14 +34,14 @@
             bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        shflyr1: shift_layer {
+        shflyr1: shift_layer1 {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_LAYER1";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&to 1>;
             mods = <(MOD_LSFT|MOD_RSFT)>; 
         };
-        shflyr2: shift_layer {
+        shflyr2: shift_layer2 {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_LAYER2";
             #binding-cells = <0>;
