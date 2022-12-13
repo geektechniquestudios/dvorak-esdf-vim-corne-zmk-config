@@ -15,8 +15,7 @@
             label = "SCREEN_RIGHT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <0>;
             bindings
                 = <&macro_press &kp LGUI &kp LCTRL>
                 , <&macro_tap &kp RIGHT>
@@ -27,8 +26,7 @@
             label = "SCREEN_LEFT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <0>;
             bindings
                 = <&macro_press &kp LGUI &kp LCTRL>
                 , <&macro_tap &kp LEFT>
