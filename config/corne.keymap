@@ -112,14 +112,14 @@
                 raise_layer {
 // layer 2
 // -------------------------------------------------------------------------------------------
-// | TAB   |   !     |  @  |  UP  |  $   |  %     |          |  [  | ]  | ^  |  /  |  \  | "|" |
-// | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          |  (  | )  | =  |  <  |  >  | ENT |
-// | SHIFT | scrnlft |     | #    | .    | scrnrt |          |  {  | }  | +  |  -  |  _  | &   |
-//                         | ALT  | CTRL | SPC    |          | SPC |    |    |
+// | TAB   |   !     |  @  |  UP  |  $   |  %     |          | ^   |  /  |  \  |  [  | ]  | "|" |
+// | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          | =   |  <  |  >  |  (  | )  | ENT |
+// | SHIFT | scrnlft |     | #    | .    | scrnrt |          | +   |  -  |  _  |  {  | }  | &   |
+//                         | ALT  | CTRL | SPC    |          | SPC |     |     |
                         bindings = <
-  &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBKT  &kp RBKT  &kp CARET &kp SLASH &kp BACKSLASH &kp PIPE 
-  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT    &kp GT        &kp RET
-  &shftcap &scrnlft &trans   &kp HASH &kp DOT   &scrnrt             &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS &kp UNDER     &kp AMPS 
+  &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp CARET &kp SLASH &kp LBKT  &kp RBKT &kp BACKSLASH &kp PIPE 
+  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp EQUAL &kp LT    &kp GT    &kp LPAR &kp RPAR      &kp RET
+  &shftcap &scrnlft &trans   &kp HASH &kp DOT   &scrnrt             &kp PLUS  &kp MINUS &kp UNDER &kp LBRC &kp RBRC      &kp AMPS 
                              &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
                         >;
                 };
