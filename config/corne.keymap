@@ -15,19 +15,25 @@
             label = "SCREEN_RIGHT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <10>;
             tap-ms = <10>;
             bindings
-                = <&macro_tap &kp LGUI &kp LCTRL &kp RIGHT>;
+                = <&macro_press &kp LGUI &kp LCTRL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI &kp LCTRL>
+                ;
         };
         scrnlft: screen_left {
             label = "SCREEN_LEFT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <10>;
             tap-ms = <10>;
             bindings
-                = <&macro_tap &kp LGUI &kp LCTRL &kp LEFT>;
+                = <&macro_press &kp LGUI &kp LCTRL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI &kp LCTRL>
+                ;
         };
     };
 
