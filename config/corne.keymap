@@ -10,6 +10,29 @@
 
 / {
 
+    macros {
+        scrnrt: screen_right {
+            label = "SCREEN_RIGHT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LCTRL>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI &kp LCTRL>
+                ;
+        };
+        scrnlft: screen_left {
+            label = "SCREEN_LEFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LCTRL>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI &kp LCTRL>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_alt {
@@ -61,10 +84,10 @@
 //  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  | m  | w  |  v  |  z  | SHFT |
 //                     | ALT | CTRL | ESC |          | SPC | sl2 | sl1 |
                         bindings = <
-   &kp TAB   &kp SQT  &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G    &kp C &kp R &kp L &kp SLASH
-   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H    &kp T &kp N &kp S &kp RET
-   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M    &kp W &kp V &kp Z &shftcap
-                                &kp LALT &kp LCTRL &gresc             &kp SPACE &shflyr2 &shflyr1
+   &kp TAB   &kp SQT  &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G &kp C &kp R &kp L &kp SLASH
+   &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H &kp T &kp N &kp S &kp RET
+   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M &kp W &kp V &kp Z &shftcap
+                                &kp LALT &kp LCTRL &gresc             &kp SPACE &to 2 &to 1
 
                         >;
                 };
@@ -87,14 +110,14 @@
                 raise_layer {
 // layer 2
 // -------------------------------------------------------------------------------------------
-// | TAB   |   !  |  @  |  UP  |  $   |  %  |          |  [  | ]  | ^  |  /  |  \  | "|" |
-// | BKSP  | HOME | LFT | DOWN | RGT  | END |          |  (  | )  | =  |  <  |  >  | ENT |
-// | SHIFT |      |     |  #   | .    |     |          |  {  | }  | +  |  -  |  _  | &   |
-//                      | ALT  | CTRL | SPC |          | SPC | l0 | l0 |
+// | TAB   |   !     |  @  |  UP  |  $   |  %     |          |  [  | ]  | ^  |  /  |  \  | "|" |
+// | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          |  (  | )  | =  |  <  |  >  | ENT |
+// | SHIFT | scrnlft |     | #    | .    | scrnrt |          |  {  | }  | +  |  -  |  _  | &   |
+//                         | ALT  | CTRL | SPC    |          | SPC | l0 | l0 |
                         bindings = <
   &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBKT  &kp RBKT  &kp CARET &kp SLASH &kp BACKSLASH &kp PIPE 
   &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT    &kp GT        &kp RET
-  &shftcap &trans   &trans   &kp HASH &kp DOT   &trans              &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS &kp UNDER     &kp AMPS 
+  &shftcap &scrnlft &trans   &kp HASH &kp DOT   &scrnrt             &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS &kp UNDER     &kp AMPS 
                              &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &to 0     &to 0
                         >;
                 };
