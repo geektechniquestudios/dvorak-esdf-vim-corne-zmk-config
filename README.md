@@ -1,4 +1,4 @@
-## dvorak-esdf-vim-zmk-config
+## dvorak-esdf-vim-zmk-corne-config
 
 A firmware for the [custom Swept Corne split wireless mechanical keyboard](https://www.etsy.com/listing/1261272903/custom-swept-corne-split-wireless?click_key=eaa188006ea8aabea90a876cf822844733b14f7d%3A1261272903&click_sum=8e4aebb2&ref=shop_home_active_2) to support the needs of a Vim programmer that types in Dvorak and uses esdf for movement.
 
