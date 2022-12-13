@@ -142,6 +142,6 @@
   &shftcap &kp F9 &kp F10 &kp F11  &kp F12   &kp C_VOL_DN        &kp C_VOL_UP &kp N1 &kp N2 &kp N3 &kp DOT   &shftcap
                           &kp LALT &kp LCTRL &kp SPACE           &kp SPACE    &to 0  &to 0
                         >;
-                }
+                };
         };
 };
