@@ -18,10 +18,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp LCTRL>
-                , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LGUI &kp LCTRL>
-                ;
+                = <&macro_tap &kp LGUI &kp LCTRL &kp RIGHT>;
         };
         scrnlft: screen_left {
             label = "SCREEN_LEFT";
@@ -30,10 +27,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&macro_press &kp LGUI &kp LCTRL>
-                , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LGUI &kp LCTRL>
-                ;
+                = <&macro_tap &kp LGUI &kp LCTRL &kp LEFT>;
         };
     };
 
@@ -86,12 +80,12 @@
 //  | TAB  |  '  |  ,  |  .  |  p   |  y  |          |  f  | g  | c  |  r  |  l  | /    |
 //  | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  | h  | t  |  n  |  s  | ENT  |
 //  | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  | m  | w  |  v  |  z  | SHFT |
-//                     | ALT | CTRL | ESC |          | SPC | sl2 | sl1 |
+//                     | ALT | CTRL | ESC |          | SPC | l2 | l1 |
                         bindings = <
    &kp TAB   &kp SQT  &kp COMMA &kp DOT  &kp P     &kp Y              &kp F     &kp G &kp C &kp R &kp L &kp SLASH
    &dbspc    &kp A    &kp O     &kp E    &kp U     &kp I              &kp D     &kp H &kp T &kp N &kp S &kp RET
    &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M &kp W &kp V &kp Z &shftcap
-                                &kp LALT &kp LCTRL &gresc             &kp SPACE &to 2 &to 1
+                                &kp LALT &kp LCTRL &gresc             &kp SPACE &mo 2 &mo 1
 
                         >;
                 };
@@ -102,12 +96,12 @@
 // | TAB  |  !   |  @  |  #   | $    | %   |          | ^   | &  | *  |  (  |  )  | -     |
 // | BKSP |  1   |  2  |  3   | 4    | 5   |          | 6   | 7  | 8  |  9  |  0  | ENT   |
 // | SHFT |  F1  |  F2 |  F3  | .    | F5  |          | F6  | F7 | F8 |  F9 | F10 | SHIFT |
-//                     | ALT  | CTRL | SPC |          | SPC | l0 | l0 |
+//                     | ALT  | CTRL | SPC |          | SPC |    |    |
                         bindings = <
    &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PERCENT          &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &kp MINUS
    &dbspc    &kp N1   &kp N2 &kp N3   &kp N4    &kp N5               &kp N6    &kp N7   &kp N8   &kp N9    &kp N0   &kp RET
    &shftcap  &kp F1   &kp F2 &kp F3   &kp DOT   &kp F5               &kp F6    &kp F7   &kp F8   &kp F9    &kp F10  &shftcap
-                             &kp LALT &kp LCTRL &kp SPACE            &kp SPACE &to 0    &to 0
+                             &kp LALT &kp LCTRL &kp SPACE            &kp SPACE &trans   &trans
                         >;
                 };
 
@@ -117,12 +111,12 @@
 // | TAB   |   !     |  @  |  UP  |  $   |  %     |          |  [  | ]  | ^  |  /  |  \  | "|" |
 // | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          |  (  | )  | =  |  <  |  >  | ENT |
 // | SHIFT | scrnlft |     | #    | .    | scrnrt |          |  {  | }  | +  |  -  |  _  | &   |
-//                         | ALT  | CTRL | SPC    |          | SPC | l0 | l0 |
+//                         | ALT  | CTRL | SPC    |          | SPC |    |    |
                         bindings = <
   &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp LBKT  &kp RBKT  &kp CARET &kp SLASH &kp BACKSLASH &kp PIPE 
   &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp LPAR  &kp RPAR  &kp EQUAL &kp LT    &kp GT        &kp RET
   &shftcap &scrnlft &trans   &kp HASH &kp DOT   &scrnrt             &kp LBRC  &kp RBRC  &kp PLUS  &kp MINUS &kp UNDER     &kp AMPS 
-                             &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &to 0     &to 0
+                             &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
                         >;
                 };
         };
