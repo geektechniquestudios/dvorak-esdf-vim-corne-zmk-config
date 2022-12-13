@@ -1,4 +1,4 @@
-### dvorak-esdf-vim-zmk-config
+## dvorak-esdf-vim-zmk-config
 
 A firmware for the [custom Swept Corne split wireless mechanical keyboard](https://www.etsy.com/listing/1261272903/custom-swept-corne-split-wireless?click_key=eaa188006ea8aabea90a876cf822844733b14f7d%3A1261272903&click_sum=8e4aebb2&ref=shop_home_active_2) to support the needs of a Vim programmer that types in Dvorak and uses esdf for movement.
 
@@ -8,7 +8,7 @@ layer 0
 | TAB  |  '  |  ,  |  .  |  p   |  y  |          |  f  | g  | c  |  r  |  l  | /    |
 | BKSP |  a  |  o  |  e  |  u   |  i  |          |  d  | h  | t  |  n  |  s  | ENT  |
 | SHFT |  ;  |  q  |  j  |  k   |  x  |          |  b  | m  | w  |  v  |  z  | SHFT |
-                   | ALT | CTRL | ESC |          | SPC | l2 | l1 |
+                   | ALT | CTRL | ESC |          | SPC | L2 | L1 |
 ```
 ```
 layer 1
@@ -35,4 +35,11 @@ layer 3
                    | ALT  | CTRL | ESC  |          | SPC | to0 | to0 |
 ```
 
-See the [config file](https://github.com/geektechniquestudios/zmk-config/blob/master/config/corne.keymap) to customize the layout.
+##### CTRL + ALT = WIN
+##### CTRL + SHIFT = CAPS
+##### SHIFT + ESC = BACKTICK
+##### L1 + L2 = L3
+##### Shift keys are sticky, meaning they don't need to be held and are released after the next key is typed.
+
+
+See the [config file](https://github.com/geektechniquestudios/zmk-config/blob/master/config/corne.keymap) to customize the layout for your needs. If you fork this repo and make changes, you can see your firmware build in the `Actions` tab.
