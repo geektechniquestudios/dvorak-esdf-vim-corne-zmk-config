@@ -67,7 +67,7 @@
             label = "SHIFT_CAPS";
             #binding-cells = <0>;
             bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LALT)>;
         };
         shflyr1: shift_layer1 {
             compatible = "zmk,behavior-mod-morph";
