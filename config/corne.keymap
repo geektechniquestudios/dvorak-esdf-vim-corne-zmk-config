@@ -88,7 +88,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-//                default_layer {
+                default_layer {
 // layer 0
 // --------------------------------------------------------------------------------------
 //  | TAB  |  '  |  ,  |  .  |  p   |  y  |          |  f  | g  | c  |  r  |  l  | /    |
@@ -101,15 +101,15 @@
 //   &shftcap  &kp SEMI &kp Q     &kp J    &kp K     &kp X              &kp B     &kp M &kp W &kp V &kp Z &shftcap
 //                                &kp LALT &kp LCTRL &gresc             &kp SPACE &mo 2 &mo 1
 
-//query alt
+//querty alt
 bindings = <
 &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp LBRC
 &dbspc &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp RET
 &shftcap &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH &shftcap
 &kp LALT &kp LCTRL &gresc &kp SPACE &mo 2 &mo 1
 
-//                        >;
-//                };
+                        >;
+                };
 
                 lower_layer {
 // layer 1
