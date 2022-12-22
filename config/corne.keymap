@@ -38,6 +38,26 @@
                 , <&macro_release &kp LGUI &kp LCTRL>
                 ;
         };
+        taskmngr: ctrl_shft_esc {
+            label = "TASK_MANAGER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT &kp ESC>
+                , <&macro_release &kp LCTRL &kp LSHFT &kp ESC>
+                ; 
+        }
+        panic: ctrl_alt_del {
+            label = "PANIC";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LALT &kp DEL>
+                , <&macro_release &kp LCTRL &kp LALT &kp DEL>
+                ; 
+        }
     };
 
     combos {
@@ -51,7 +71,7 @@
             timeout-ms = <50>;
             key-positions = <40 41>;
             bindings = <&to 3>;
-        };
+        };        
     };
 
     behaviors {
@@ -143,14 +163,14 @@
                 function_layer {
 // layer 3
 // ------------------------------------------------------------------------------------
-// | TAB   | F1 | F2  | F3  | F4  | PSE  |          | PLY | 7 | 8   | 9 | - | /     |
-// | BKSP  | F5 | F6  | F7  | F8  | PREV |          | NXT | 4 | 5   | 6 | + | ENT   |
-// | SHIFT | F9 | F10 | F11 | F12 | VDWN |          | VUP | 1 | 2   | 3 | . | SHIFT |
-//                    | BT0 | BT1 | ESC  |          | SPC | 0 | to0 |
+// | CTRL + SHFT + ESC | F1 | F2  | F3  | F4  | PSE  |          | PLY | 7 | 8   | 9 | - | /     |
+// | CTRL + ALT + DEL  | F5 | F6  | F7  | F8  | PREV |          | NXT | 4 | 5   | 6 | + | ENT   |
+// | SHIFT             | F9 | F10 | F11 | F12 | VDWN |          | VUP | 1 | 2   | 3 | . | SHIFT |
+//                                | BT0 | BT1 | ESC  |          | SPC | 0 | to0 |
                         bindings = <
-  &kp TAB  &kp F1 &kp F2  &kp F3     &kp F4         &kp C_PAUSE         &kp C_PLAY   &kp N7 &kp N8 &kp N9 &kp MINUS &kp SLASH 
-  &dbspc   &kp F5 &kp F6  &kp F7     &kp F8         &kp C_PREV          &kp C_NEXT   &kp N4 &kp N5 &kp N6 &kp PLUS  &kp RET
-  &shftcap &kp F9 &kp F10 &kp F11    &kp F12        &kp C_VOL_DN        &kp C_VOL_UP &kp N1 &kp N2 &kp N3 &kp DOT   &shftcap
+  &taskmngr &kp F1 &kp F2  &kp F3     &kp F4         &kp C_PAUSE         &kp C_PLAY   &kp N7 &kp N8 &kp N9 &kp MINUS &kp SLASH 
+  &panic    &kp F5 &kp F6  &kp F7     &kp F8         &kp C_PREV          &kp C_NEXT   &kp N4 &kp N5 &kp N6 &kp PLUS  &kp RET
+  &shftcap  &kp F9 &kp F10 &kp F11    &kp F12        &kp C_VOL_DN        &kp C_VOL_UP &kp N1 &kp N2 &kp N3 &kp DOT   &shftcap
                           &bt BT_SEL 0 &bt BT_SEL 1 &gresc              &kp SPACE    &kp N0 &to 0
                         >;
                 };     
