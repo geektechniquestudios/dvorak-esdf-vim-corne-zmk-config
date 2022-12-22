@@ -27,12 +27,12 @@ layer 2
                         | ALT  | CTRL | SPC    |          | SPC |     |     |
 ```
 ```
-layer 3
-------------------------------------------------------------------------------------
-| TAB   | F1 | F2  | F3  | F4  | PSE  |          | PLY | 7 | 8   | 9 | - | /     |
-| BKSP  | F5 | F6  | F7  | F8  | PREV |          | NXT | 4 | 5   | 6 | + | ENT   |
-| SHIFT | F9 | F10 | F11 | F12 | VDWN |          | VUP | 1 | 2   | 3 | . | SHIFT |
-                   | BT0 | BT1 | ESC  |          | SPC | 0 | to0 |
+// layer 3
+// ----------------------------------------------------------------------------------------------
+// | CTRL + SHFT + ESC | F1 | F2  | F3  | F4  | PSE  |          | PLY | 7 | 8   | 9 | - | /     |
+// | CTRL + ALT + DEL  | F5 | F6  | F7  | F8  | PREV |          | NXT | 4 | 5   | 6 | + | ENT   |
+// | SHIFT             | F9 | F10 | F11 | F12 | VDWN |          | VUP | 1 | 2   | 3 | . | SHIFT |
+//                                | BT0 | BT1 | ESC  |          | SPC | 0 | to0 |
 ```
 
 ##### CTRL + ALT = WIN
