@@ -47,7 +47,7 @@
                 = <&macro_press &kp LCTRL &kp LSHFT &kp ESC>
                 , <&macro_release &kp LCTRL &kp LSHFT &kp ESC>
                 ; 
-        }
+        };
         panic: ctrl_alt_del {
             label = "PANIC";
             compatible = "zmk,behavior-macro";
@@ -57,7 +57,7 @@
                 = <&macro_press &kp LCTRL &kp LALT &kp DEL>
                 , <&macro_release &kp LCTRL &kp LALT &kp DEL>
                 ; 
-        }
+        };
     };
 
     combos {
