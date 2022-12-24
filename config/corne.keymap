@@ -150,13 +150,13 @@
 // ----------------------------------------------------------------------------------------------
 // | TAB   |   !     |  @  |  UP  |  $   |  %     |          | ^   |  /  |  \  |  [  | ]  | "|" |
 // | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          | =   |  <  |  >  |  (  | )  | ENT |
-// | SHIFT | scrnlft |     | #    | .    | scrnrt |          | +   |  -  |  _  |  {  | }  | &   |
+// | SHIFT | scrnlft |  ~  | #    | .    | scrnrt |          | +   |  -  |  _  |  {  | }  | &   |
 //                         | ALT  | CTRL | SPC    |          | SPC |     |     |
                         bindings = <
-  &kp TAB  &kp EXCL &kp AT   &kp UP   &kp DLLR  &kp PERCENT         &kp CARET &kp SLASH &kp BACKSLASH &kp LBKT &kp RBKT &kp PIPE 
-  &dbspc   &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END             &kp EQUAL &kp LT    &kp GT        &kp LPAR &kp RPAR &kp RET
-  &shftcap &scrnlft &trans   &kp HASH &kp DOT   &scrnrt             &kp PLUS  &kp MINUS &kp UNDER     &kp LBRC &kp RBRC &kp AMPS 
-                             &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
+  &kp TAB  &kp EXCL &kp AT    &kp UP   &kp DLLR  &kp PERCENT         &kp CARET &kp SLASH &kp BACKSLASH &kp LBKT &kp RBKT &kp PIPE 
+  &dbspc   &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END             &kp EQUAL &kp LT    &kp GT        &kp LPAR &kp RPAR &kp RET
+  &shftcap &scrnlft &kp TILDE &kp HASH &kp DOT   &scrnrt             &kp PLUS  &kp MINUS &kp UNDER     &kp LBRC &kp RBRC &kp AMPS 
+                              &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
                         >;
                 };
                 
