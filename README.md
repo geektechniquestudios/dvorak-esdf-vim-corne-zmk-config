@@ -38,6 +38,7 @@ layer 3
 ##### CTRL + ALT = WIN
 ##### ALT + SHIFT = CAPS
 ##### SHIFT + ESC = BACKTICK
+##### SHIFT + BACKSPACE = DELETE
 ##### L1 + L2 = L3
 ##### Shift keys are sticky, meaning they don't need to be held and are released after the next key is typed.
 
