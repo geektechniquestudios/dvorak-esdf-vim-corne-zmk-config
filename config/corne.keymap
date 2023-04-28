@@ -151,12 +151,12 @@
 // | TAB   |   !     |  @  |  UP  |  $   |  %     |          | ^   |  /  |  \  |  [  | ]  | "|" |
 // | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          | =   |  <  |  >  |  (  | )  | ENT |
 // | SHIFT | scrnlft |  ~  | #    | .    | scrnrt |          | +   |  -  |  _  |  {  | }  | &   |
-//                         | ALT  | CTRL | SPC    |          | SPC |     |     |
+//                         | LGUI  | CTRL | SPC    |          | SPC |     |     |
                         bindings = <
   &kp TAB  &kp EXCL &kp AT    &kp UP   &kp DLLR  &kp PERCENT         &kp CARET &kp SLASH &kp BACKSLASH &kp LBKT &kp RBKT &kp PIPE 
   &dbspc   &kp HOME &kp LEFT  &kp DOWN &kp RIGHT &kp END             &kp EQUAL &kp LT    &kp GT        &kp LPAR &kp RPAR &kp RET
   &shftcap &scrnlft &kp TILDE &kp HASH &kp DOT   &scrnrt             &kp PLUS  &kp MINUS &kp UNDER     &kp LBRC &kp RBRC &kp AMPS 
-                              &kp LALT &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
+                              &kp LGUI &kp LCTRL &kp SPACE           &kp SPACE &trans    &trans
                         >;
                 };
                 
@@ -170,8 +170,8 @@
                         bindings = <
   &taskmngr &kp F1 &kp F2  &kp F3  &kp F4  &kp C_PAUSE         &kp C_PLAY   &kp N7 &kp N8 &kp N9 &kp MINUS &kp SLASH 
   &panic    &kp F5 &kp F6  &kp F7  &kp F8  &kp C_PREV          &kp C_NEXT   &kp N4 &kp N5 &kp N6 &kp PLUS  &kp RET
-  &shftcap  &kp F9 &kp F10 &kp F11 &kp F12  &kp C_VOL_DN        &kp C_VOL_UP &kp N1 &kp N2 &kp N3 &kp DOT   &shftcap
-                           &trans  &trans   &gresc              &kp SPACE    &kp N0 &to 0
+  &shftcap  &kp F9 &kp F10 &kp F11 &kp F12 &kp C_VOL_DN        &kp C_VOL_UP &kp N1 &kp N2 &kp N3 &kp DOT   &shftcap
+                           &trans  &trans  &gresc              &kp SPACE    &kp N0 &to 0
                         >;
                 };     
                
