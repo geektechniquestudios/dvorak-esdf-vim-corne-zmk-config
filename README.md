@@ -24,7 +24,7 @@ layer 2
 | TAB   |   !     |  @  |  UP  |  $   |  %     |          | ^   |  /  |  \  |  [  | ]  | "|" |
 | BKSP  | HOME    | LFT | DOWN | RGT  | END    |          | =   |  <  |  >  |  (  | )  | ENT |
 | SHIFT | scrnlft |  ~  | #    | .    | scrnrt |          | +   |  -  |  _  |  {  | }  | &   |
-                        | ALT  | CTRL | SPC    |          | SPC |     |     |
+                        | LGUI | CTRL | SPC    |          | SPC |     |     |
 ```
 ```
 layer 3
