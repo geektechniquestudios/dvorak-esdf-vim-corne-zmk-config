@@ -68,7 +68,7 @@
             bindings = <&kp LGUI>;
         };
         combo_lyr {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <40 41>;
             bindings = <&to 3>;
         };        
